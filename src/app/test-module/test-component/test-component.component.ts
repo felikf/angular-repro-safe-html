@@ -1,5 +1,5 @@
 import { Component, OnInit, SecurityContext } from '@angular/core';
-import { DomSanitizer, SafeHtml, SafeUrl } from '@angular/platform-browser';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'dbs-test-component',
@@ -8,7 +8,7 @@ import { DomSanitizer, SafeHtml, SafeUrl } from '@angular/platform-browser';
 })
 export class TestComponentComponent implements OnInit {
 
-  description: SafeHtml;
+  description: any;
   docUrl: SafeUrl;
 
   constructor(private readonly sanitizer: DomSanitizer) {}
